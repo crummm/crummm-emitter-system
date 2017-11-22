@@ -1,12 +1,19 @@
 {
   "http-url": "https://www.typescriptlang.org/docs/handbook/compiler-options.html",
   "compilerOptions": {
+    "declaration": true,
+    "stripInternal": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es6",
     "module": "commonjs",
-    "outDir": "build",
-    "rootDir": "src",
-    "pretty": true,
+    "moduleResolution": "node",
+    "noEmitOnError": false,
+    "lib": ["es2015", "dom"],
+    "target": "es5",
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "pretty": false,
     "watch": true
   },
   "include": [

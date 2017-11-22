@@ -10,7 +10,7 @@
   },
   "homepage": "https://crummm.com/dev",
   "license": "MIT",
-  "main": "index.js",
+  "main": "dist/index",
   "scripts": {
     "start": "tsc --project tsconfig.json",
     "test": "jest"
