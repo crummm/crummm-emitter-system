@@ -1,8 +1,42 @@
-import { CrummmEmitterSystemInstance } from "./CrummmEmitterSystemInstance";
-import { CrummmEmitterSystem } from "./CrummmEmitterSystem";
+import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
+import { CrummmEmitterSystemInstance } from "crummm-emitter-system/dist/CrummmEmitterSystemInstance";
+import { CrummmEmitterSystem } from "crummm-emitter-system";
 
-export class CrummmEmitterSystemExamples {
-  constructor(){}
+@Component({
+  selector: 'page-home',
+  templateUrl: 'home.html'
+})
+export class HomePage {
+
+  constructor(public navCtrl: NavController) {
+    this.systemExampleWithRequestAndResponse();
+    this.instanceExampleWithEmitAndOn();
+    this.instanceExampleWithEmitAndOnOnce();
+    this.instanceExampleWithListenOrder();
+  }
+
+  public systemExampleWithRequestAndResponse() {
+    // listen for requests
+    CrummmEmitterSystem.onRequest(
+      "helloRequest",
+      (responseCallback: Function, requestValue: any)=> {
+        responseCallback("Hello " + requestValue + "!");
+      }
+    );
+
+    // make request for data
+    CrummmEmitterSystem.emitRequest(
+      "helloRequest",
+      (response: string)=> {
+        console.log(response);
+      },
+      "Billy"
+    );
+
+    // EXPECTED RESULT LOG
+    // Hello Billy!
+  }
 
   public instanceExampleWithEmitAndOn() {
     const TYPE = "TYPE";
@@ -84,27 +118,5 @@ export class CrummmEmitterSystemExamples {
     // This should fire 1st even though it's setup 2nd:  Hello listenOrder!
     // This should fire 2nd even though it's setup 3rd:  Hello listenOrder!
     // This should fire 3rd even though it's setup 1st:  Hello listenOrder!
-  }
-
-  public systemExampleWithRequestAndResponse() {
-    // listen for requests
-    CrummmEmitterSystem.onRequest(
-      "helloRequest",
-      (responseCallback: Function, requestValue: any)=> {
-        responseCallback("Hello " + requestValue + "!");
-      }
-    );
-
-    // make request for data
-    CrummmEmitterSystem.emitRequest(
-      "helloRequest",
-      (response: string)=> {
-        console.log(response);
-      },
-      "Billy"
-    );
-
-    // EXPECTED RESULT LOG
-    // Hello Billy!
   }
 }

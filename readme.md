@@ -2,16 +2,23 @@
 
 A zero-dependency emitter system with some fancy features under the hood.
 
-**But why?**
+
+**Just tell me how to install it!**
+```
+$ npm i crummm-emitter-system --save
+```
+
+**But why would you want to?**
 
 The original intent of this system was to decouple components, libraries, services, etc by allowing them to communicate anonymously. That said, there's countless ways to use emitter systems.
 
-**But aren't there like a million emit/on, pub/sub, event/listener systems out there already?**
+**Aren't there like a million emit/on, pub/sub, event/listener systems out there already?**
 
 You betcha, and somehow none of them did the trick for me. My dev soul was deeply saddened by the following:
 * wonky implementation
 * unfulfilling feature-sets
 * framework dependencies
+* a lack of TypeScript support
 * developers who fell asleep at the wheel (that's my job!)
 
 Plus, I wanted some advanced features like those referenced later in this documentation.
