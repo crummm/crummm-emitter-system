@@ -1,0 +1,21 @@
+{
+  "http-url": "https://www.typescriptlang.org/docs/handbook/compiler-options.html",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "build",
+    "rootDir": "src",
+    "pretty": true,
+    "watch": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "**/*.spec.ts",
+    "node_modules",
+    "typings",
+    "typings/index.d.ts"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "crummm-emitter-system",
+  "version": "0.0.1",
+  "description": "A zero-dependency emitter system with some fancy features under the hood.",
+  "keywords": [],
+  "author": "Chris Crum",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngrx/core.git"
+  },
+  "homepage": "https://crummm.com/dev",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --project tsconfig.json",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^20.0.8",
+    "jest": "^20.0.4",
+    "reflect-metadata": "^0.1.10",
+    "ts-jest": "^20.0.10",
+    "typescript": "2.4.2"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "./node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "assets/libs/"
+    ]
+  }
+}
