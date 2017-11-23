@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { CrummmEmitterSystemInstance } from "crummm-emitter-system/dist/CrummmEmitterSystemInstance";
+import { CrummmEmitterSystemInstance } from "crummm-emitter-system/dist";
 import { CrummmEmitterSystem } from "crummm-emitter-system";
 
 @Component({

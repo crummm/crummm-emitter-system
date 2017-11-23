@@ -1,12 +1,12 @@
 {
   "name": "crummm-emitter-system",
-  "version": "0.0.8",
+  "version": "0.1.1",
   "description": "A zero-dependency emitter system with some fancy features under the hood.",
-  "keywords": [],
+  "keywords": ["emitter", "emit", "on", "listener", "listen order", "event", "events", "publish", "subscribe", "javascript", "typescript", "custom"],
   "author": "Chris Crum",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ngrx/core.git"
+    "url": "https://github.com/crummm/crummm-emitter-system"
   },
   "homepage": "https://crummm.com/dev",
   "license": "MIT",

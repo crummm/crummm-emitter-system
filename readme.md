@@ -8,7 +8,7 @@ A zero-dependency emitter system with some fancy features under the hood.
 $ npm i crummm-emitter-system --save
 ```
 
-**But why would you want to?**
+**Great...what's it for?**
 
 The original intent of this system was to decouple components, libraries, services, etc by allowing them to communicate anonymously. That said, there's countless ways to use emitter systems.
 
@@ -23,7 +23,7 @@ You betcha, and somehow none of them did the trick for me. My dev soul was deepl
 
 Plus, I wanted some advanced features like those referenced later in this documentation.
 
-All that said, will this system work for you? Probably not. Ha! But **I** kind of like it, so there's that.
+All that said, will this system work for you? Probably not. Ha! But I kind of like it, so there is that.
 
 Fancy words aside, let's get to the meat and potatoes of this thing.
 
@@ -129,12 +129,17 @@ TODO - npm
 ### Examples
 Check out the 'examples' directory for different implementations and usages.
 
-###Errors
+### Errors
 What'd you do wrong now?! Hey, don't beat yourself up, I've probably done the same thing already. Check out my mistakes and (hopefully) solutions below!
 * ```tsc command not found ```
   * when: occurs after attempting to run command ```$ npm start```
   * mistake: something got jacked up...so I'm not beating myself up for this one
   * solution: ```$ npm install typescript -g```
+  
+#### If using an IntelliJ product
+* mark the following directories as excluded
+  * dist
+  * examples
 
 ### In conclusion
 
